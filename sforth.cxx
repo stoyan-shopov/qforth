@@ -43,7 +43,6 @@ void SForth::run()
 	sforth_socket->connectToServer("sforth-server");
 	if (!sforth_socket->waitForConnected())
 	{
-		QMessageBox::critical(0, "Failed to connect to sforth server", "Failed to connect to sforth server, aborting");
 		qDebug() << "Failed to connect to sforth server, aborting";
 		return;
 	}

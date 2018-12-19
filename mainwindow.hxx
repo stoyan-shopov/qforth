@@ -17,6 +17,9 @@ class MainWindow : public QMainWindow
 public:
 	explicit MainWindow(QProcess& sforth_process, QWidget *parent = nullptr);
 	~MainWindow();
+protected:
+	void closeEvent(QCloseEvent * event) override;
+
 private:
 	QProcess&	sforth_process;
 	QLocalServer	sforth_frontend_server;

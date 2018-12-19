@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 	{
 		SForth f;
 		f.start();
-		return a.exec();
+		f.wait();
+		return 0;
 	}
 	QProcess sforth_process;
 	sforth_process.waitForStarted();
