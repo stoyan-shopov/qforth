@@ -3,6 +3,7 @@
 #include <QCommandLineParser>
 #include <QProcess>
 #include <QMessageBox>
+#include <QFontDatabase>
 
 #include "sforth.hxx"
 
@@ -26,6 +27,11 @@ int main(int argc, char *argv[])
 	sforth_process.setProgram(QString(argv[0])/* + "xxx"*/);
 	sforth_process.setArguments(QStringList() << "--sforth-mode");
 	MainWindow w(sforth_process);
+
+	int id = QFontDatabase::addApplicationFont(":/fonts/fonts/gabriele.light-ribbon-fg-regular.ttf");
+	QString family = QFontDatabase::applicationFontFamilies(id).at(0);
+	QFont monospace(family);
+	a.setFont(monospace);
 
 	w.show();
 
