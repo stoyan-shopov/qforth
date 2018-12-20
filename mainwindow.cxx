@@ -10,6 +10,10 @@ MainWindow::MainWindow(QProcess &sforth_process, QWidget *parent) :
 {
 	ui->setupUi(this);
 
+	QFile f(":/stylesheet.txt");
+	f.open(QFile::ReadOnly);
+	setStyleSheet(f.readAll());
+
 	connect(&sforth_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
 		[&] (int exitCode, QProcess::ExitStatus exitStatus)
 	{

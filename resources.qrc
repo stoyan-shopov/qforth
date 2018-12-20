@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>init.fs</file>
+        <file>stylesheet.txt</file>
     </qresource>
     <qresource prefix="/fonts">
         <file>fonts/gabriele.light-ribbon-fg-regular.ttf</file>
