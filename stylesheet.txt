@@ -14,6 +14,11 @@ QMainWindow::separator:hover {
     background: red;
 }
 
+QLineEdit {
+        color		: rgba(85, 255, 85, /* opacity */ 100%);
+        background	: black;
+}
+
 QPlainTextEdit {
         color		: rgba(85, 255, 85, /* opacity */ 100%);
         background	: black;
